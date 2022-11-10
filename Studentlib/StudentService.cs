@@ -34,7 +34,7 @@ public class StudentService
         {
             if (x.Id == s.Id)
             {
-                return true;
+                return false;
             }
         }
 

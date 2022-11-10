@@ -26,11 +26,21 @@ namespace TestProjectStudentSevice
         public void addStudentNull_NullReferenceException()
         {
 
-   
+            Student s = new Student() { Id = 1, Name = "huy", Age = 20 };
             StudentService.StudentService studentsv = new StudentService.StudentService();
            
 
-            try { studentsv.addStudent(null); } catch (NullReferenceException e) {};
+            try { 
+                if(studentsv!=null)
+                {
+                    studentsv.addStudent(s); 
+                }    
+                
+            } catch (NullReferenceException e) 
+            {
+                throw new Exception();
+                    
+             };
            
 
         }
