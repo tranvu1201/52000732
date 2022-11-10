@@ -22,12 +22,20 @@ namespace TestProjectStudentSevice
             
         }
 
-        /*[TestClass]
-        public void TestScore()
+        [TestMethod]
+        public void addStudentNull_NullReferenceException()
         {
-            Student student = new Student();
-            int s = student.Score(8);
-        }*/
+
+   
+            StudentService.StudentService studentsv = new StudentService.StudentService();
+           
+
+            try { studentsv.addStudent(null); } catch (NullReferenceException e) {};
+           
+
+        }
+
+       
 
     }
 }
