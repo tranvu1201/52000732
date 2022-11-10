@@ -35,7 +35,17 @@ namespace TestProjectStudentSevice
 
         }
 
-       
+        [TestMethod]
+        public void checkscore()
+        {
+            Student st = new Student();
+            double s = st.Score;
+            st.Score = 10;
+            if(st.Score>0 && st.Score<0)
+            {
+                throw new Exception();
+            }
+        }
 
     }
 }
